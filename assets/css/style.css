@@ -1,0 +1,229 @@
+/* Import Font yang lebih modern (Opsional) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    /* Ganti font default Bootstrap dengan Poppins */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Membuat warna "danger" (merah) Bootstrap
+   sesuai dengan brand "Kerenyes Chicken" Anda.
+   Anda bisa ganti kode warnanya di sini.
+*/
+.btn-danger {
+    background-color: #d9534f; /* Merah khas Anda */
+    border-color: #d9534f;
+    transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #c9302c; /* Warna lebih gelap saat hover */
+    border-color: #c12e2a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(217, 83, 79, 0.3);
+}
+
+.text-danger {
+    color: #d9534f !important; /* Paksa warna teks */
+}
+
+.btn-outline-danger {
+    border-color: #d9534f;
+    color: #d9534f;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-danger:hover {
+    background-color: #d9534f;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(217, 83, 79, 0.3);
+}
+
+/* Menu Card Hover Effects */
+.menu-card {
+    transition: all 0.3s ease;
+    border-radius: 15px;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.menu-card img {
+    border-radius: 15px 15px 0 0;
+    transition: transform 0.3s ease;
+}
+
+.menu-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Promo Card Effects */
+.promo-card {
+    transition: all 0.3s ease;
+    border-radius: 15px;
+}
+
+.promo-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Shadow */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.menu-card, .promo-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .menu-card:hover, .promo-card:hover {
+        transform: none;
+    }
+
+    .btn-danger:hover, .btn-outline-danger:hover {
+        transform: none;
+    }
+}
+
+/* Cart Badge */
+.cart-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #d9534f;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Checkout Page Styles */
+.checkout-card {
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.checkout-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+    transition: all 0.3s ease;
+}
+
+.step-section:hover .step-number {
+    transform: scale(1.1);
+}
+
+.payment-option {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.payment-option:hover {
+    border-color: #d9534f !important;
+    background-color: rgba(217, 83, 79, 0.05);
+}
+
+.payment-option input[type="radio"]:checked + label {
+    color: #d9534f;
+    font-weight: bold;
+}
+
+.payment-option input[type="radio"]:checked ~ .payment-option {
+    border-color: #d9534f;
+    background-color: rgba(217, 83, 79, 0.1);
+}
+
+/* Success Page Styles */
+.success-card {
+    border-radius: 20px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.success-icon {
+    animation: bounceIn 1s ease-out;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.order-number {
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.order-number:hover {
+    border-color: #d9534f;
+    box-shadow: 0 0 15px rgba(217, 83, 79, 0.2);
+}
+
+.additional-info .col-md-4 {
+    transition: all 0.3s ease;
+}
+
+.additional-info .col-md-4:hover {
+    transform: translateY(-5px);
+}
+
+.additional-info a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.additional-info a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+    .checkout-card, .success-card {
+        margin: 0 15px;
+    }
+
+    .action-buttons .row {
+        flex-direction: column;
+    }
+
+    .additional-info .row {
+        text-align: center;
+    }
+}
